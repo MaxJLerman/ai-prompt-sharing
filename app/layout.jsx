@@ -12,14 +12,16 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <div className="main">
-          <div className="gradient" />
-        </div>
-        <main className="app">
-          {/* Navigation component placed here so is visible on all pages */}
-          <Navigation />
-          {children}
-        </main>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
+          <main className="app">
+            {/* Navigation component placed here so is visible on all pages */}
+            <Navigation />
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );
