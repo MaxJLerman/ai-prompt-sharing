@@ -1,6 +1,12 @@
-const Provider = () => {
+"use client";
+
+import { SessionProvider } from "next-auth/react";
+
+const Provider = ({ children, currentSession }) => {
   return (
-    <div>Provider</div>
+    <SessionProvider session={currentSession}>
+      {children}
+    </SessionProvider>
   );
 };
 
